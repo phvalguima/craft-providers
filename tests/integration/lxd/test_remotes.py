@@ -66,7 +66,7 @@ def test_configure_and_launch_remote(instance_name, alias):
 def test_configure_and_launch_buildd_remotes(instance_name, alias):
     """Verify function `configure_buildd_image_remote()` can launch core 18|20|22."""
     image_remote = lxd.configure_buildd_image_remote()
-    assert image_remote == "craft-com.ubuntu.cloud-buildd"
+    assert image_remote == "com.ubuntu.cloud-buildd"
 
     base_configuration = ubuntu.BuilddBase(alias=alias)
     instance = lxd.launch(
